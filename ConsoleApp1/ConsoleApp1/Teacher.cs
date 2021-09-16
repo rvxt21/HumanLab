@@ -41,9 +41,9 @@ namespace ConsoleApp1
                 ThisTeacherStudent.Add(student);
             }
         }
-        public void GetInfoTeacher()
+        public string InfoTeacherToString()
         {
-            Console.WriteLine(base.GetInfo() + maxNumOfStudent);
+            return($"{base.GetInfo()}\nNum of students:{maxNumOfStudent}");
         }
     }
 }

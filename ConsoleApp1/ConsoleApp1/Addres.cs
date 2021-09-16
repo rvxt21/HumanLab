@@ -34,7 +34,7 @@ namespace ConsoleApp1
         }
         public string AddresToString()
         {
-            return (city + " " + street+" "+house.ToString()); 
+            return ($"\nCity:{city}\nStreet:{street}\nHouse:{house.ToString()}"); 
         }
     }
 }

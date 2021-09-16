@@ -6,17 +6,21 @@ namespace ConsoleApp1
 {
     class Student:Human
     {
+        private string faculty;
         private int group;
-        public Student(int group,string name,int age,Addres add,Mark avarage):base(name,age,add,avarage)
+        private float avarageMark;
+        public Student(string faculty,int group,float avarageMark,string name,string surname,int age,Addres add):base(name,surname,age,add)
         {
+            this.faculty = faculty;
             this.group = group;
-            
+            this.avarageMark = avarageMark;
         }
+        public string Faculty {  get { return faculty; } set { faculty = value; } }
         public int Group { get { return group; } set { group = value; } }
-        
+        public float AvarageMark { get { return avarageMark; } set { avarageMark = value; } }
         public string getAllInformation()
         {
-            return base.GetInfo() + group.ToString();
+             return ($"Faculty:{faculty}\nGroup:{group.ToString()}\nAvarage mark:{avarageMark.ToString()}\n{base.GetInfo()}");
         }
     }
 }

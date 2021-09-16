@@ -8,26 +8,30 @@ namespace ConsoleApp1
     {
 
             protected string name;
+            protected string surname;
             protected int age;
             protected Addres addres;
-            protected Mark avarage;
+           
 
-            public Human(string name, int age, Addres addres, Mark avarage)
+            public Human(string name,string surname, int age, Addres addres)
             {
                 this.name = name;
+                this.surname = surname;
                 this.age = age;
                 this.addres = addres;
-                this.avarage = avarage;
+                
             }
 
             public Addres Addres { get { return addres; } set { addres = value; } }
-            public Mark Avarage { get { return avarage; } set { avarage = value; } }
+            
             public string GetInfo()
             {
-                return ($"Name:{name}\nAge:{age}\nAddres:{addres.Street}\nAvarage:{avarage}");
+                return ($"Name:{name}\nSurname:{surname}\nAge:{age}\n\tAddres:{addres.AddresToString()}\n");
             }
 
-            public String Name { get { return name; } set { name = value; } }
+            public string Name { get { return name; } set { name = value; } }
+            public string Surname {  get { return surname; } set { surname = value; } }
+            public int Age { get { return age; } set { age = value; } }
     }
 }
 
